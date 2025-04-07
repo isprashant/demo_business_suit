@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Viewer</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        .header { background: #333; color: white; padding: 1em; text-align: center; }
+        .sidebar { width: 200px; background: #f4f4f4; position: fixed; top: 150px; bottom: 0; left: 0; padding: 1em; }
+        .content { margin-left: 220px; padding: 1em; }
+        a { display: block; margin: 0.5em 0; color: #333; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>All in one Suit</h1>
+        <p>Simple and clean UI</p>
+    </div>
+    <div class="sidebar">
+        {% for model in models %}
+            <a href="/model/{{ model.0 }}/">{{ model.1 }}</a>
+        {% endfor %}
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
