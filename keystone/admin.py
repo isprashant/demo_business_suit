@@ -1,6 +1,6 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Building, Spaces, Device, NFC
+from .models import Building, Space, Device, NFC
 
-admin.site.register([Building, Spaces, Device, NFC ])
+admin.site.register([Building, Space, Device, NFC ])
